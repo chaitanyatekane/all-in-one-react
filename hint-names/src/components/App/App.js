@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
 import Header from '../../Header/Header';
+import SearchBox from './SearchBox/SearchBox';
 
 class App extends React.Component {
     
+    state = {
+        headerText: "Hint Names",
+    }
+
     render(){
         return (
             <div>
-                <Header />
+                <Header headTitle={this.state.headerText} />
+                <SearchBox />
             </div>
         )
     }
